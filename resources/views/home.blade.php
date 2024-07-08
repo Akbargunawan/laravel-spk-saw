@@ -34,7 +34,7 @@
 	<link rel="stylesheet" href="css/flatpickr.min.css">
 
 
-	<title>Home</title>
+	<title>Home|SPKPTL</title>
 </head>
 <body>
 
@@ -53,7 +53,7 @@
 				<div class="site-navigation">
 					<div class="row g-0 align-items-center">
 						<div class="col-2">
-							<a href="index.html" class="logo m-0 float-start">SPKPTL<span class="text-primary">.</span></a>
+							<a href="" class="logo m-0 float-start">SPKPTL<span class="text-primary">.</span></a>
 						</div>
 						<div class="col-8 text-center ">
 							<ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu mx-auto">
@@ -112,8 +112,8 @@
 					</div>
 				</div>
 				<div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-					<div class="img-wrap">
-						<img src="https://klikpsikolog.com/wp-content/uploads/2018/12/liburan-.jpg" alt="Image" class="img-fluid rounded">
+					<div>
+						<img src="images/mudik.png" alt="Image" class="img-fluid rounded">
 					</div>
 				</div>
 			</div>
@@ -125,8 +125,7 @@
 		<div class="container">
 			<div class="row justify-content-between">
 				<div class="col-lg-7 mb-4 mb-lg-0">
-					<img src="https://st3.depositphotos.com/6633222/16199/v/450/depositphotos_161994164-stock-illustration-happy-family-traveling-with-red.jpg" alt="Image" class="img-fluid rounded
-					">
+					<img src="https://st3.depositphotos.com/6633222/16199/v/450/depositphotos_161994164-stock-illustration-happy-family-traveling-with-red.jpg" alt="Image" class="img-fluid rounded">
 				</div>
 				<div class="col-lg-4 ps-lg-2">
 					 
@@ -238,7 +237,7 @@
               **==========
             -->
 
-            <p>Gondrong &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a> <!-- License information: https://untree.co/license/ -->
+            <p>akbrg &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a> <!-- License information: https://untree.co/license/ -->
             </p>
           </div>
         </div>

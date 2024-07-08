@@ -1,14 +1,19 @@
 <x-app-layout>
-    <!-- heading -->
+ <!-- heading -->
+    <div class="container bg-primary text-white text-center py-5">
+        <h1 class="display-4">Selamat Datang di Dashboard</h1>
+        <p class="lead">Kami senang Anda bergabung dengan kami.</p>
+    </div>
+
     <div class="container">
-        <div class="primary-bg" style="padding: 40px 0px !important;">
+        <div style="padding: 40px 0px !important;">
             <div class="row justify-content-between align-items-center">
                 <div class="col-md-8 d-md-none text-center">
-                    <img src="images/logormv.png" class="heading-img w-full" style="margin-bottom: 8%;">
+                    <img src="images/logokurmv.png" class="heading-img w-full" style="margin-bottom: 8%;">
                 </div>
                 <div class="col-md-6 text-center text-md-start fade-x-left">
                     <div class="fs-2 fw-bold d-md-flex">
-                        <span class="fs-sm-7" style="margin-top: 30px;">SPKPTL APP</span>
+                        <span class="fs-sm-7" style="margin-top: 30px;">SPK-PTL</span>
                     </div>
                     <div class="my-3 fs-8" style="font-size: 18px;">
                         Selamat datang di sistem pendukung keputusan pemilihan tempat liburan! Kami di sini untuk membantu kamu menemukan destinasi liburan yang paling sesuai dengan keinginan dan kebutuhanmu. Hanya dengan beberapa klik, kamu bisa mendapatkan rekomendasi tempat liburan yang akan membuat liburanmu tak terlupakan. Mari mulai petualanganmu sekarang!
@@ -21,35 +26,133 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <img src="images/logormv.png" class="ms-auto d-none d-md-block w-full fade-x-right">
+                    <img src="images/logokurmv.png" class="ms-auto d-none d-md-block w-full fade-x-right">
                 </div>
             </div>
         </div>
     </div>
 
-    <footer class="bg-primary text-white text-center text-lg-start">
-        <!-- Grid container -->
-        <div class="container p-4">
-            <!--Grid row-->
-            <div class="row">
-                <!--Grid column-->
-                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                    <h6 class="text-uppercase">Tentang Kami</h6>
-                    <p>
-                        Aplikasi Sistem Pendukung Keputusan Pemilihan Tempat Liburan dirancang untuk membantu Anda menemukan destinasi liburan terbaik berdasarkan berbagai kriteria.
-                    </p>
-                </div>
-                <!--Grid column-->
+    <footer class=" bg-primary text-center text-white" >
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!-- Section: Images -->
+      <section class="">
+        <div class="row">
+          <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+            <div
+                 class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                 data-ripple-color="light"
+                 >
+              <img
+                   src="https://www.indonesia.travel/content/dam/indtravelrevamp/en/destinations/revision-2019/4.jpg"
+                   class="w-100"
+                   />
+              <a href="#!">
+                <div
+                     class="mask"
+                     style="background-color: rgba(251, 251, 251, 0.2);"
+                     ></div>
+              </a>
             </div>
-            <!--Grid row-->
+          </div>
+          <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+            <div
+                 class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                 data-ripple-color="light"
+                 >
+              <img
+                   src="https://mdbootstrap.com/img/new/fluid/city/111.jpg"
+                   class="w-100"
+                   />
+              <a href="#!">
+                <div
+                     class="mask"
+                     style="background-color: rgba(251, 251, 251, 0.2);"
+                     ></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+            <div
+                 class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                 data-ripple-color="light"
+                 >
+              <img
+                   src="https://mdbootstrap.com/img/new/fluid/city/112.jpg"
+                   class="w-100"
+                   />
+              <a href="#!">
+                <div
+                     class="mask"
+                     style="background-color: rgba(251, 251, 251, 0.2);"
+                     ></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+            <div
+                 class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                 data-ripple-color="light"
+                 >
+              <img
+                   src="https://mdbootstrap.com/img/new/fluid/city/114.jpg"
+                   class="w-100"
+                   />
+              <a href="#!">
+                <div
+                     class="mask"
+                     style="background-color: rgba(251, 251, 251, 0.2);"
+                     ></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+            <div
+                 class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                 data-ripple-color="light"
+                 >
+              <img
+                   src="https://mdbootstrap.com/img/new/fluid/city/115.jpg"
+                   class="w-100"
+                   />
+              <a href="#!">
+                <div
+                     class="mask"
+                     style="background-color: rgba(251, 251, 251, 0.2);"
+                     ></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+            <div
+                 class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                 data-ripple-color="light"
+                 >
+              <img
+                   src="https://mdbootstrap.com/img/new/fluid/city/116.jpg"
+                   class="w-100"
+                   />
+              <a href="#!">
+                <div
+                     class="mask"
+                     style="background-color: rgba(251, 251, 251, 0.2);"
+                     ></div>
+              </a>
+            </div>
+          </div>
         </div>
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            @22090101
-            <a class="text-white" href="">SPKPTL.com</a>
-        </div>
-        <!-- Copyright -->
-    </footer>
+      </section>
+      <!-- Section: Images -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      ©22090101akbrgnwn
+      <a class="text-white" href="">SpkPTL.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
 
     <style>
         .heading-card {

@@ -25,24 +25,24 @@ class PerhitunganController extends Controller
         // Hitung normalisasi SAW untuk setiap alternatif
         foreach ($alternatives as $alternatif) {
             // Hitung normalisasi untuk kriteria COST (C1)
-            $normalisasiC1 = $minC1 / $alternatif->C1;
+            $alternatif->normalisasiC1 = $minC1 / $alternatif->C1;
 
             // Hitung normalisasi untuk kriteria BENEFIT (C2, C3, C4, C5)
-            $normalisasiC2 = $alternatif->C2 / $maxC2;
-            $normalisasiC3 = $alternatif->C3 / $maxC3;
-            $normalisasiC4 = $alternatif->C4 / $maxC4;
-            $normalisasiC5 = $alternatif->C5 / $maxC5;
+            $alternatif->normalisasiC2 = $alternatif->C2 / $maxC2;
+            $alternatif->normalisasiC3 = $alternatif->C3 / $maxC3;
+            $alternatif->normalisasiC4 = $alternatif->C4 / $maxC4;
+            $alternatif->normalisasiC5 = $alternatif->C5 / $maxC5;
 
             // Hitung nilai SAW (Simple Additive Weighting)
             $alternatif->normalized_saw = 
-                ($normalisasiC1 * 0.30) + // Bobot C1
-                ($normalisasiC2 * 0.20) + // Bobot C2
-                ($normalisasiC3 * 0.25) + // Bobot C3
-                ($normalisasiC4 * 0.15) + // Bobot C4
-                ($normalisasiC5 * 0.10); // Bobot C5
+                ($alternatif->normalisasiC1 * 0.30) + // Bobot C1
+                ($alternatif->normalisasiC2 * 0.20) + // Bobot C2
+                ($alternatif->normalisasiC3 * 0.25) + // Bobot C3
+                ($alternatif->normalisasiC4 * 0.15) + // Bobot C4
+                ($alternatif->normalisasiC5 * 0.10); // Bobot C5
         }
 
         // Kembalikan data ke view perhitungan/index.blade.php
-        return view('perhitungan.index', compact('alternatives'));
+        return view('perhitungan.index', compact('alternatives', 'minC1', 'maxC2', 'maxC3', 'maxC4', 'maxC5'));
     }
 }

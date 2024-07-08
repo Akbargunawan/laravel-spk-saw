@@ -3,6 +3,11 @@
         Kriterias
     </x-slot>
 
+    <div class="container bg-primary text-white text-center py-5">
+        <h1 class="display-4">Data Kriteria</h1>
+        <p class="lead">Silahkan tentukan kriteria anda disini.</p>
+    </div>
+
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-12">

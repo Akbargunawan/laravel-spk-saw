@@ -1,65 +1,110 @@
-<x-guest-layout>
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign In | SPKLPTL</title>
 
-    <form method="POST" action="{{ route('login') }}">
-        @csrf
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="formregister/fonts/material-icon/css/material-design-iconic-font.min.css">
 
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
-        </div>
+    <!-- Main css -->
+    <link rel="stylesheet" href="formregister/css/style.css">
+    <style>
+        /* Custom styles for the buttons */
+        .forgot-password-link {
+            text-decoration: none;
+            color: #6366F1; /* Adjust color as needed */
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
 
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
+        .forgot-password-link:hover {
+            color: #4F46E5; /* Adjust hover color as needed */
+        }
 
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password" />
+        .login-button {
+            background-color: #6366F1; /* Adjust background color as needed */
+            color: #FFFFFF; /* Adjust text color as needed */
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
 
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
+        .login-button:hover {
+            background-color: #4F46E5; /* Adjust hover background color as needed */
+        }
+    </style>
+</head>
+<body>
 
-        <!-- Remember Me -->
-        <div class="block mt-4">
-            <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox" class="rounded dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800" name="remember">
-                <span class="ml-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Remember me') }}</span>
-            </label>
-        </div>
+<div class="main">
+    <!-- Sign in Form -->
+    <section class="sign-in">
+        <div class="container">
+            <div class="signin-content">
+                <div class="signin-image">
+                    <figure><img src="formregister/images/loginlogo.png" alt="sign up image"></figure>
+                    <a href="{{ route('register') }}" class="signup-image-link">Create an account</a>
+                </div>
 
-        <div class="flex items-center justify-end mt-4">
-            @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
-            @endif
+                <div class="signin-form">
+                    <h2 class="form-title">Sign in</h2>
+                    <form method="POST" action="{{ route('login') }}" class="register-form" id="login-form">
+                        @csrf
 
-            <x-primary-button class="ml-3">
-                {{ __('Log in') }}
-            </x-primary-button>
-        </div>
-        <div class="-mx 3 flex flex-1 justify-center">
-           
+                        <!-- Email Address -->
+                        <div class="form-group">
+                            <label for="email"><i class="zmdi zmdi-email"></i></label>
+                            <input type="email" name="email" id="email" placeholder="Your Email" :value="old('email')" required autofocus autocomplete="email" />
+                            <!-- Error Messages -->
+                            @error('email')
+                            <span class="error">{{ $message }}</span>
+                            @enderror
+                        </div>
 
-        <a href="/socialite/github"class="px-3 py-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
-            </svg>
+                        <!-- Password -->
+                        <div class="form-group">
+                            <label for="password"><i class="zmdi zmdi-lock"></i></label>
+                            <input type="password" name="password" id="password" placeholder="Password" required autocomplete="current-password" />
+                            <!-- Error Messages -->
+                            @error('password')
+                            <span class="error">{{ $message }}</span>
+                            @enderror
+                        </div>
 
-         </a>
+                        <!-- Remember Me -->
+                        <div class="form-group">
+                            <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }} />
+                            <label for="remember" class="label-agree-term"><span><span></span></span>Remember me</label>
+                        </div>
 
-        <a href="/socialite/google" class="px-3 py-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
-             <path d="M15.545 6.558a9.4 9.4 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.7 7.7 0 0 1 5.352 2.082l-2.284 2.284A4.35 4.35 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.8 4.8 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.7 3.7 0 0 0 1.599-2.431H8v-3.08z"/>
-            </svg>
-        </a>
+                        <!-- Forgot Password Link -->
+                        <div class="flex items-center justify-end mt-4">
+                         @if (Route::has('password.request'))
+                            <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('password.request') }}">
+                             {{ __('Forgot your password?') }}
+                            </a>
+                         @endif
+                         </div>
 
+                        <!-- Submit Button -->
+                        <div class="form-group form-button">
+                            <button type="submit" class="login-button"> {{ __('Log in') }}</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-    </form>
-</x-guest-layout>
+    </section>
+</div>
+
+<!-- JS -->
+<script src="formregister/vendor/jquery/jquery.min.js"></script>
+<script src="formregister/js/main.js"></script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
